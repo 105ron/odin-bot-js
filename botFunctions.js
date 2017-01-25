@@ -45,6 +45,10 @@ var botFunctions = {
     condition: /\/motivate/,
     response: responses.botResponseDontGiveUp
   },
+  shia: {
+    condition: /\/shia/,
+    response: responses.botResponseDoIt
+  },
   chatWithBot: {
     condition: /bot\b/,
     response: responses.botResponseChat

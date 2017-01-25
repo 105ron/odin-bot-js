@@ -242,6 +242,15 @@ function botResponseDontGiveUp({text,room,data:{fromUser:{username: user}}}) {
   chatHelpers.send(`${mentions} Don't give up! https://www.youtube.com/watch?v=KxGRhd_iWuE`, room);
 }
 
+function botResponseDoIt({text,room,data:{fromUser:{username: user}}}) {
+  var mentions = helpers.getMentions(text);
+
+  if (mentions) mentions = mentions.join(' ');
+  else mentions = `@${user}`; // if no one is mentioned, tag the requester
+
+  chatHelpers.send(`${mentions} Make your dreams come true! https://www.youtube.com/watch?v=KxGRhd_iWuE`, room);
+}
+
 
 exports.botResponseUseLinux = botResponseUseLinux;
 exports.botResponseGandalf = botResponseGandalf;
